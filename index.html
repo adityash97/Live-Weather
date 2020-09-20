@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GitHub Finder</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-primary mb-3">
+        <div class="container">
+          <nav class="navbar-brand">Github Finder</nav>
+        </div>
+    </nav>
+
+    <div id="parentDiv" class="container mb-3">
+        <div id="childDiv" class="card card-body">
+            <h3>Gihub Finder</h3>
+            <label for="inputSearch" class="lead">Enter user name for searching</label>
+            <input type="text" id="inputSearch" class="form-control" placeholder="type username here..">
+        </div>
+    </div>
+    <!-- output will come dynamically here -->
+    <div id="showOutput" class="container"> </div>   
+    <!-- footter -->
+    <footer class="mt-3 p-3 bg-light text-center">SearchisFun &copy;</footer> 
+
+    <script src="github.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
