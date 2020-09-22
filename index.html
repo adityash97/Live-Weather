@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Today</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-b+jboW/YIpW2ZZYyYdXczKK6igHlnkPNfN9kYAbqYV7rNQ9PKTXlS2D6j1QZIATW" crossorigin="anonymous">
+</head>
+<body>
+    <div class="conatiner">
+        <div  class="row">
+            <div id="parent" class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
+                <h1 id="w-location">Location</h1>
+                <h3 class="text-dark" id="w-desc">Description</h3>
+                <h3 id="w-string">String</h3>
+                <img  id="w-icon">
+                <ul id="w-details" class="list-group mt-3">
+                    <li class="list-group-item" id="w-humidity">w-humidity</li>
+                    <li class="list-group-item" id="w-dewpoint">w-dewpoint</li>
+                    <li class="list-group-item" id="w-feels-like">w-feels-like</li>
+                    <li class="list-group-item" id="w-wind">w-wind</li>
+                </ul>
+                <hr>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#locModal">
+                    Choose Place
+                  </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+     <div class="modal fade" id="locModal" tabindex="-1" role="dialog" aria-labelledby="locModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="locModalLabel">Choose Location</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <form  id="w-form">
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input type="text" class="form-control" id="country" >
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city">
+                    </div>
+                    <button type="submit" id="change-btn" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                </form>
+
+             
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              
+            
+            </div>
+          </div>
+        </div>
+      </div>
+<!--Modal ends here -->
+
+
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="storage.js"></script>
+    <script src="weather.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
