@@ -1,7 +1,7 @@
 //creating object for 'Github class'
 const github = new Github();
 //creating class of UI
-const ui = new UI;
+const ui = new UI();
 
 const inputSearch = document.getElementById('inputSearch');
 inputSearch.addEventListener('keyup',getUserName);
